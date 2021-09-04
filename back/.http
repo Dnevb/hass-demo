@@ -1,0 +1,85 @@
+POST http://localhost:4000/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email":"dan@mail.com",
+  "pass":"12345"
+}
+
+###
+
+POST http://localhost:4000/api/register HTTP/1.1
+Content-Type: application/json
+
+{
+  "email":"dan@mail.com",
+  "pass":"12345",
+  "nombres":"dan",
+  "apellidos":"vil"
+}
+
+###
+GET http://localhost:4000/api/me HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbkBtYWlsLmNvbSIsIm5vbWJyZXMiOiJkYW4iLCJhcGVsbGlkb3MiOiJ2aWwiLCJ1aWQiOiI5YmJlMTg2MC0zNGM3LTRhMjQtYjZkMS01OGJiOWM4ZjNkYTciLCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNjIwNzQyOTYwLCJleHAiOjE2MjA3NTczNjB9.ELtM5Vn5HCFqyod2GbNsKow5ZWdcQEBDAIRzg-rr2eU
+
+###
+
+POST http://localhost:4000/api/productos HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbkBtYWlsLmNvbSIsIm5vbWJyZXMiOiJkYW4iLCJhcGVsbGlkb3MiOiJ2aWwiLCJ1aWQiOiI5YmJlMTg2MC0zNGM3LTRhMjQtYjZkMS01OGJiOWM4ZjNkYTciLCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNjIwNzQyOTYwLCJleHAiOjE2MjA3NTczNjB9.ELtM5Vn5HCFqyod2GbNsKow5ZWdcQEBDAIRzg-rr2eU
+
+{
+  "nombre":"Ventilador",
+  "cantidad":12,
+  "precio": 200
+}
+###
+
+POST http://localhost:4000/api/carrito/producto HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbkBtYWlsLmNvbSIsIm5vbWJyZXMiOiJkYW4iLCJhcGVsbGlkb3MiOiJ2aWwiLCJ1aWQiOiI5YmJlMTg2MC0zNGM3LTRhMjQtYjZkMS01OGJiOWM4ZjNkYTciLCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNjIwNzQyOTYwLCJleHAiOjE2MjA3NTczNjB9.ELtM5Vn5HCFqyod2GbNsKow5ZWdcQEBDAIRzg-rr2eU
+
+{
+  "id":"a11ea426-0fdf-4a15-a0a6-e7c7cfed65a1",
+  "cantidad":2
+}
+
+###
+
+PATCH http://localhost:4000/api/carrito/producto HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbkBtYWlsLmNvbSIsIm5vbWJyZXMiOiJkYW4iLCJhcGVsbGlkb3MiOiJ2aWwiLCJ1aWQiOiI5YmJlMTg2MC0zNGM3LTRhMjQtYjZkMS01OGJiOWM4ZjNkYTciLCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNjIwNzQyOTYwLCJleHAiOjE2MjA3NTczNjB9.ELtM5Vn5HCFqyod2GbNsKow5ZWdcQEBDAIRzg-rr2eU
+
+{
+  "id":"7f0166c4-3169-4499-8710-79abcd2c5ae9",
+  "cantidad":4
+}
+
+###
+POST http://localhost:4000/api/carrito/completar HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbkBtYWlsLmNvbSIsIm5vbWJyZXMiOiJkYW4iLCJhcGVsbGlkb3MiOiJ2aWwiLCJ1aWQiOiI5YmJlMTg2MC0zNGM3LTRhMjQtYjZkMS01OGJiOWM4ZjNkYTciLCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNjIwNzQyOTYwLCJleHAiOjE2MjA3NTczNjB9.ELtM5Vn5HCFqyod2GbNsKow5ZWdcQEBDAIRzg-rr2eU
+###
+DELETE http://localhost:4000/api/carrito/producto HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbkBtYWlsLmNvbSIsIm5vbWJyZXMiOiJkYW4iLCJhcGVsbGlkb3MiOiJ2aWwiLCJ1aWQiOiI5YmJlMTg2MC0zNGM3LTRhMjQtYjZkMS01OGJiOWM4ZjNkYTciLCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNjIwNzQyOTYwLCJleHAiOjE2MjA3NTczNjB9.ELtM5Vn5HCFqyod2GbNsKow5ZWdcQEBDAIRzg-rr2eU
+
+{
+  "id":"7f0166c4-3169-4499-8710-79abcd2c5ae9"
+}
+
+###
+GET http://localhost:4000/api/carrito HTTP/1.1
+Content-Type: application/json
+###
+GET http://localhost:4000/api/productos HTTP/1.1
+Content-Type: application/json
+###
+DELETE  http://localhost:4000/api/productos HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbkBtYWlsLmNvbSIsIm5vbWJyZXMiOiJkYW4iLCJhcGVsbGlkb3MiOiJ2aWwiLCJ1aWQiOiI5YmJlMTg2MC0zNGM3LTRhMjQtYjZkMS01OGJiOWM4ZjNkYTciLCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNjIwNzQyOTYwLCJleHAiOjE2MjA3NTczNjB9.ELtM5Vn5HCFqyod2GbNsKow5ZWdcQEBDAIRzg-rr2eU
+
+{
+  "id":"5c9bd83e-5bc9-44e5-8c49-06afdce28935"
+}
